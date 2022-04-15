@@ -11,25 +11,25 @@
       <h2 id="t1"> Структура проекта </h2>
   </summary>
 
-    ```cmd
-    Cleaning the Work Area
-    |   .gitignore
-    |   README.md
-    |   script.py  <-- Исполняемый файл
-    |
-    +---Format File  <-- Папка, где будут созданы папки для разных расширений
-    |   +---Developer
-    |   +---Document
-    |   +---Raster image
-    |   \---Website
-    |   ...
-    |
-    +---template  <-- Папка, где лежит html страница ресурса
-    |       data.html
-    |
-    \---time_
-        |   time_function.py
-    ```
+```cmd
+Cleaning the Work Area
+|   .gitignore
+|   README.md
+|   script.py  <-- Исполняемый файл
+|
++---Format File  <-- Папка, где будут созданы папки для разных расширений
+|   +---Developer
+|   +---Document
+|   +---Raster image
+|   \---Website
+|   ...
+|
++---template  <-- Папка, где лежит html страница ресурса
+|       data.html
+|
+\---time_
+    |   time_function.py
+```
 
 </details>
 
