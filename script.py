@@ -1,5 +1,6 @@
 import os
 import requests
+from pprint import pprint
 
 from bs4 import BeautifulSoup as BS
 
@@ -52,6 +53,7 @@ def scan(data_from_url):
             collection.append(i.text.lower())
 
         ALL_DATAS[file.text] = tuple(collection)
+        pprint(ALL_DATAS)
     return ALL_DATAS
 
 
