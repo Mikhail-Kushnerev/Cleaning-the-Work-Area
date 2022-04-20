@@ -16,14 +16,14 @@ URL = 'https://www.online-convert.com/ru/file-type'
 
 
 @time_of_function
-def get_data(url):
+def get_data(url: str) -> str:
     """
     Получение данных либо с файла (если он есть), либо с ссылки.
     """
     name = 'template'
     try:
         with open(f'{name}/data.html', encoding='utf-8') as f:
-            response: str = f.read()
+            response = f.read()
         logger.info('Файл для чтения обнаружен')
     except FileNotFoundError as file:
         logger.error(f'Файл для чтения не обнаружен \n|\t{file}')
