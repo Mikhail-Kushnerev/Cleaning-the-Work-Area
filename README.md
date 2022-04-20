@@ -87,7 +87,7 @@ git clone https://github.com/Mikhail-Kushnerev/Cleaning-the-Work-Area
 ## Результат работы скрипта:  
 
 <img
-  align="top center"
+  align="top"
   alt="before"
   width="40%"
   src="https://github.com/Mikhail-Kushnerev/image/blob/main/Cleaning/before.jpg">
