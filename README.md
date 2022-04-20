@@ -15,8 +15,8 @@
 
 ## Технологии
 
-- Python 3.10
-- BeautifulSoup
+- Python 3.10;
+- BeautifulSoup.
 
 [⬆️Оглавление](#оглавление)
 
@@ -71,4 +71,4 @@ Cleaning the Work Area
 ## Авторы
 
 [**Mikhail Kushnerev**](https://github.com/Mikhail-Kushnerev)  
-[⬆️в начало](#cleaning-the-work-area)
+[в начало](#cleaning-the-work-area)
