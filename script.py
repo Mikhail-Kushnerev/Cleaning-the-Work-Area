@@ -79,7 +79,7 @@ def scan(data_from_url: str) -> dict:
     data = src.find_all('div', class_='row mb-3') #! категориии для папок
 
     logger.info('Парсинг расширенний для каждой категории')
-    with Bar('\tРаспаковка расширений под категорию:', max=20) as bar:
+    with Bar('|\tРаспаковка расширений под категорию:', max=20) as bar:
         for _ in range(20):
             for table in data:
                 file = table.find(

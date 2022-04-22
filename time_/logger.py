@@ -5,7 +5,7 @@ import sys
 logging.basicConfig(
     level=logging.INFO,
     encoding='utf-8',
-    format="|\t%(asctime)s – [%(levelname)s]: %(message)s. Исполняемый файл – '%(name)s'",
+    format="|\t%(asctime)s – [%(levelname)s]: %(message)s. Исполняемый файл – '%(filename)s': функция – '%(funcName)s'",
     handlers=(logging.StreamHandler(sys.stdout), )
 )
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__file__)

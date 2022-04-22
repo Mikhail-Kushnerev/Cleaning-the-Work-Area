@@ -11,7 +11,7 @@ def fucntion(base_dir: str, main_fail: str, dictonary: dict):
     своей категории, лежащий в папке 'Format File'.
     """
     logger.info('Процесс сортировки')
-    with Bar('Processing', max=20) as bar:
+    with Bar('|\tProcessing', max=20) as bar:
         for _ in range(20):
             for file in os.listdir(base_dir):
                 target: str = file.split('.')[-1]
