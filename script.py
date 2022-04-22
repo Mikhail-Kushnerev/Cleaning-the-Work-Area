@@ -47,7 +47,7 @@ def get_data(url: str) -> str:
 
 
 @time_of_function
-def scan(data_from_url):
+def scan(data_from_url: str) -> dict:
     """
     Работа с полученными данными после обращения либо к ресурсу, либо к файлу.
     +––––––––––––––––––––––––––––––––––––––---–+ – Блок №1
@@ -98,7 +98,7 @@ def scan(data_from_url):
 
 
 @time_of_function
-def sorted_files(dictonary):
+def sorted_files(dictonary: dict) -> str:
     """
     Процесс сортировки по папкам.
         Для сортировки каждое расширение перемещается в папку своей категории,
