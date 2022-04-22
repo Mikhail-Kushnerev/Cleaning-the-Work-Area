@@ -2,10 +2,14 @@ import os
 from progress.bar import Bar
 
 from time_.logger import logger
-# from script import BASE_DIR, MAIN_FAIL, ALL_DATAS
 
 def fucntion(base_dir: str, main_fail: str, dictonary: dict):
-
+    """
+        В корневой директории каждый файл смотрится на соответствии с расши-
+    рением, хранящийся в словаре ALL_DATAS. В случае если это исполняемый
+    файл 'script.py', то этот файл игнорируется, иной – перемещается в папку
+    своей категории, лежащий в папке 'Format File'.
+    """
     logger.info('Процесс сортировки')
     with Bar('Processing', max=20) as bar:
         for _ in range(20):
@@ -24,11 +28,3 @@ def fucntion(base_dir: str, main_fail: str, dictonary: dict):
                             dst=f'{base_dir}\\Format File\\{folder_name}\\{file}'
                         )
             bar.next()
-
-
-# def main():
-#     fucntion(BASE_DIR, MAIN_FAIL, ALL_DATAS)
-
-
-# if __name__ == '__main__':
-#     main()

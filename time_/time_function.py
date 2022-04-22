@@ -2,6 +2,10 @@ import time
 
 
 def time_of_function(func):
+    """
+        Декоратор, измеряющий время работы заложенной функции. Результат
+    даётся в секундаъ.
+    """
     def wrapper(*args):
         start_time = time.time()
         print(f'– – – –\n| Запуск функции: {func.__name__}')
