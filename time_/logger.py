@@ -1,7 +1,6 @@
 import logging
 import sys
 
-
 logging.basicConfig(
     level=logging.INFO,
     encoding='utf-8',

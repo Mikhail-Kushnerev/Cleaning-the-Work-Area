@@ -1,13 +1,12 @@
 import os
 import requests
 
-from progress.bar import Bar
 from bs4 import BeautifulSoup as BS
+from progress.bar import Bar
 
-from time_.sort_function import fucntion
 from time_.logger import logger
+from time_.sort_function import fucntion
 from time_.time_function import time_of_function
-
 
 MAIN_FAIL = os.path.abspath(__file__)
 BASE_DIR = os.path.dirname(MAIN_FAIL)
@@ -76,7 +75,7 @@ def scan(data_from_url: str) -> dict:
     logger.info('Начинается парсинг данных')
     src = BS(data_from_url, 'html.parser')
     logger.info('Нахождение категорий')
-    data = src.find_all('div', class_='row mb-3') #! категориии для папок
+    data = src.find_all('div', class_='row mb-3')  # ! категориии для папок
 
     logger.info('Парсинг расширенний для каждой категории')
     with Bar('|\tРаспаковка расширений под категорию:', max=20) as bar:
@@ -85,8 +84,11 @@ def scan(data_from_url: str) -> dict:
                 file = table.find(
                     'div',
                     class_='col-12 mt-4 mb-3 font-lg font-weight-bold text-center'
-                ) #! название категории
-                expansion = table.find_all('p', class_='font-lg mb-0') #! расширение
+                )  # ! название категории
+                expansion = table.find_all(
+                    'p',
+                    class_='font-lg mb-0'
+                )  # ! расширение
                 collection = []
                 for i in expansion:
                     collection.append(i.text.lower())
@@ -111,7 +113,8 @@ def sorted_files(dictonary: dict) -> str:
     except FileExistsError as file:
         logger.error(f'\n|\t{file}')
     finally:
-        logger.info(f'Запуск функции {fucntion.__name__} по перемещнию файлов по папкам категорий')
+        logger.info(
+            f'Запуск функции {fucntion.__name__} по перемещнию файлов по папкам категорий')
         fucntion(BASE_DIR, MAIN_FAIL, dictonary)
     return '– – – –\n\tDONE'
 

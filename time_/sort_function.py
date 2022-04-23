@@ -1,7 +1,9 @@
 import os
+
 from progress.bar import Bar
 
 from time_.logger import logger
+
 
 def fucntion(base_dir: str, main_fail: str, dictonary: dict):
     """
